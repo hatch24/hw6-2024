@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function () {
 	document.querySelector("#player1").play();
 	console.log('volume is set to ' + video.volume)
-	document.querySelector("#volume").innerHTML = video.volume;
+	document.querySelector("#volume").innerHTML = ((video.volume) * 100) + "%";
   });
 
 //Pause the video.//
@@ -67,7 +67,7 @@ document.querySelector("#mute").addEventListener("click", function () {
 slider.addEventListener("change", function() {
 	var vlm = document.getElementById("slider");
 	video.volume = vlm.value / 100;
-	document.querySelector("#volume").innerHTML = video.volume;
+	document.querySelector("#volume").innerHTML = ((video.volume) * 100) + "%";
 });
 
 //Utilize the existing oldSchool class on the video element//
